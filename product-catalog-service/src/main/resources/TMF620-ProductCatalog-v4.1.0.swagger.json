@@ -4197,7 +4197,7 @@
                 "id"
             ]
         },
-        "Any": {},
+        "Any": {"type": "object"},
         "Attachment": {
             "type": "object",
             "description": "Complements the description of an element (for instance a product) through video, pictures...",
