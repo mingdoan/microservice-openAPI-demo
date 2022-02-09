@@ -19,4 +19,5 @@ public class CatalogQueryDaoImpl implements CatalogQueryDao {
         System.out.println("Inside Employee Query DAO Impl's get()");
         return mongoTemplate.findAll(Catalog.class);
     }
+
 }

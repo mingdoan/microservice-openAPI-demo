@@ -21,4 +21,5 @@ public class CatalogServiceImpl implements CatalogService {
     public Catalog save(Catalog catalog) {
         return repository.save(catalog);
     }
+
 }

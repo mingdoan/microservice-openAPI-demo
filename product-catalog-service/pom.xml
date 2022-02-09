@@ -29,24 +29,31 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openapitools</groupId>
+            <artifactId>jackson-databind-nullable</artifactId>
+            <version>0.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>3.0.2</version>
+        </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
         <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>1.5.22</version>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/io.swagger/swagger-models -->
         <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-models</artifactId>
-            <version>1.5.22</version>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>2.9.8</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
@@ -112,13 +119,31 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <target>
+                                <delete dir="${project.build.directory}/generated-sources/openapi/src/test" includeemptydirs="true"></delete>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-codegen-maven-plugin</artifactId>
-                <version>2.2.1</version>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <version>5.3.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -126,14 +151,20 @@
                         </goals>
                         <configuration>
                             <inputSpec>${project.basedir}/src/main/resources/TMF620-ProductCatalog-v4.1.0.swagger.json</inputSpec>
-                            <!-- language file, like e.g. JavaJaxRSCodegen shipped with swagger -->
-                            <language>java</language>
                             <output>${project.build.directory}/generated-sources</output>
+                            <generatorName>spring</generatorName>
                             <apiPackage>com.example.productcatalogservice.api</apiPackage>
                             <modelPackage>com.example.productcatalogservice.models</modelPackage>
+                            <invokerPackage>com.example.productcatalogservice.invokers</invokerPackage>
+                            <typeMappings>
+                                <typeMapping>Any=java.lang.Object</typeMapping>
+                            </typeMappings>
+                            <skipOverwrite>true</skipOverwrite>
                             <configOptions>
                                 <interfaceOnly>true</interfaceOnly>
                                 <dateLibrary>java11</dateLibrary>
+                                <delegatePattern>true</delegatePattern>
+                                <openApiNullable>false</openApiNullable>
                             </configOptions>
                         </configuration>
                     </execution>
