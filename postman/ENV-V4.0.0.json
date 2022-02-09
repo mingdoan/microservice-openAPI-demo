@@ -1,0 +1,162 @@
+{
+    "id": "6d1dc54c-e75c-454f-b2e7-c48385bb6997",
+    "name": "TMF_ENV-V4.0.0-R19-0",
+    "values": [
+        {
+            "key": "Quote_API",
+            "value": "https://api-quote-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Partnership_API",
+            "value": "https://api-partnership-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Event_API",
+            "value": "http://127.0.0.1:8080",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Customer_API",
+            "value": "https://api-customer-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Process_Flow_API",
+            "value": "https://api-processflow-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Account_API",
+            "value": "https://api-account-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Shopping_Cart_API",
+            "value": "https://api-shopping-cart-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Product_Offering_Qualification_API",
+            "value": "https://api-product-offering-qualification-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Party_Role_API",
+            "value": "https://api-party-role-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Sales_API",
+            "value": "https://api-sales-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Party_API",
+            "value": "https://api-party-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Agreement_API",
+            "value": "https://api-agreement-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Product_Inventory_API",
+            "value": "https://api-product-inventory-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Product_Ordering_API",
+            "value": "https://api-product-ordering-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Product_Catalog_API",
+            "value": "https://api-product-catalog-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Appointment_API",
+            "value": "https://api-appointment-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        },
+        {
+            "key": "Trouble_Ticket_API",
+            "value": "https://api-trouble-ticket-v4-0-0.mybluemix.net",
+            "description": {
+                "content": "",
+                "type": "text/plain"
+            },
+            "enabled": true
+        }
+    ],
+    "_postman_variable_scope": "environment",
+    "_postman_exported_at": "2019-07-31T11:27:26.549Z",
+    "_postman_exported_using": "Postman/6.5.3"
+}
