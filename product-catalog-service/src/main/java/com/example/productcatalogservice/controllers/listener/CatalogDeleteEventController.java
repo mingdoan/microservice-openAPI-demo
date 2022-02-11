@@ -1,8 +1,6 @@
 package com.example.productcatalogservice.controllers.listener;
 
-import com.example.productcatalogservice.models.CatalogBatchEvent;
 import com.example.productcatalogservice.models.CatalogDeleteEvent;
-import com.example.productcatalogservice.services.listener.CatalogBatchEventService;
 import com.example.productcatalogservice.services.listener.CatalogDeleteEventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

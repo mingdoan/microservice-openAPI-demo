@@ -1,8 +1,6 @@
 package com.example.productcatalogservice.controllers.listener;
 
-import com.example.productcatalogservice.models.CategoryStateChangeEvent;
 import com.example.productcatalogservice.models.ProductOfferingAttributeValueChangeEvent;
-import com.example.productcatalogservice.services.listener.CategoryStateChangeEventService;
 import com.example.productcatalogservice.services.listener.ProductOfferingAttributeValueChangeEventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
