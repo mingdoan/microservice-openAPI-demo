@@ -1,0 +1,7 @@
+package com.example.productcatalogservice.repositories.listener;
+
+import com.example.productcatalogservice.models.ProductOfferingPriceAttributeValueChangeEvent;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface ProductOfferingPriceAttributeValueChangeEventRepository extends MongoRepository<ProductOfferingPriceAttributeValueChangeEvent,String> {
+}
