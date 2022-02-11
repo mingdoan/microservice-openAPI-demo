@@ -1,8 +1,6 @@
 package com.example.productcatalogservice.services.impl.listener;
 
-import com.example.productcatalogservice.models.CatalogCreateEvent;
 import com.example.productcatalogservice.models.CatalogDeleteEvent;
-import com.example.productcatalogservice.repositories.listener.CatalogCreateEventRepository;
 import com.example.productcatalogservice.repositories.listener.CatalogDeleteEventRepository;
 import com.example.productcatalogservice.services.listener.CatalogDeleteEventService;
 import org.springframework.beans.factory.annotation.Autowired;
