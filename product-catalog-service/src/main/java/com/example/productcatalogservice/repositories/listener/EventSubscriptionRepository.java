@@ -1,6 +1,5 @@
 package com.example.productcatalogservice.repositories.listener;
 
-import com.example.productcatalogservice.models.CatalogCreateEvent;
 import com.example.productcatalogservice.models.EventSubscription;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

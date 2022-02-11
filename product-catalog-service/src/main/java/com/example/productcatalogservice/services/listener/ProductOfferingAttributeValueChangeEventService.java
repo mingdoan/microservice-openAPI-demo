@@ -1,0 +1,7 @@
+package com.example.productcatalogservice.services.listener;
+
+import com.example.productcatalogservice.models.ProductOfferingAttributeValueChangeEvent;
+
+public interface ProductOfferingAttributeValueChangeEventService {
+    ProductOfferingAttributeValueChangeEvent save(ProductOfferingAttributeValueChangeEvent productOfferingAttributeValueChangeEvent);
+}
