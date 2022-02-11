@@ -166,7 +166,7 @@
                             <generatorName>spring</generatorName>
                             <apiPackage>com.example.productcatalogservice.api</apiPackage>
                             <modelPackage>com.example.productcatalogservice.models</modelPackage>
-                            <invokerPackage>com.example.productcatalogservice.invokers</invokerPackage>
+                            <invokerPackage>com.example.productcatalogservice.invoker</invokerPackage>
                             <typeMappings>
                                 <typeMapping>Any=java.lang.Object</typeMapping>
                             </typeMappings>
@@ -174,7 +174,7 @@
                             <configOptions>
                                 <interfaceOnly>true</interfaceOnly>
                                 <dateLibrary>java11</dateLibrary>
-                                <delegatePattern>true</delegatePattern>
+<!--                                <delegatePattern>true</delegatePattern>-->
                                 <openApiNullable>false</openApiNullable>
                             </configOptions>
                         </configuration>
