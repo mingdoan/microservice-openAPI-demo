@@ -1,0 +1,27 @@
+#debug=true
+#spring.data.mongodb.host=localhost
+#spring.data.mongodb.port=27017
+#spring.data.mongodb.database=spring_boot_mongo_microservices_app
+#spring.jackson.default-property-inclusion=NON_NULL
+#springdoc.api-docs.path=/api-docs
+#springdoc.swagger-ui.path=/swagger-ui-custom.html
+#logging.level.ROOT=DEBUG
+spring:
+  application:
+    name: product-catalog-service
+  data:
+    mongodb:
+      database: spring_boot_mongo_microservices_app
+      host: localhost
+      port: 27017
+
+config:
+  import: "optional:configserver:http://localhost:8088"
+springdoc:
+  packagesToScan: com.example.productcatalogservice
+  swagger-ui:
+    path: /swagger-ui-custom.html
+  api-docs:
+    path: /api-docs
+
+
