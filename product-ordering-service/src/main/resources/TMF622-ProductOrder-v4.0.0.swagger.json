@@ -1422,7 +1422,7 @@
                 }
             }
         },
-        "Any": {},
+        "Any": {"type": "object"},
         "AppointmentRef": {
             "type": "object",
             "description": "Refers an appointment, such as a Customer presentation or internal meeting or site visit",
