@@ -11,8 +11,9 @@ spring:
     name: product-catalog-service
   data:
     mongodb:
-      database: spring_boot_mongo_microservices_app
-      host: localhost
+#      uri: mongodb+srv://admin:admin@cluster0.ollrj.mongodb.net/product_catalog?retryWrites=true&w=majority
+      database: product_catalog
+      host: mongo_db
       port: 27017
 
 config:
