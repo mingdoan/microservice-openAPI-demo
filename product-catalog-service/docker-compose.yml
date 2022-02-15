@@ -1,0 +1,57 @@
+##version: "3.7"
+##services:
+##  product_catalog:
+##    build: .
+##    restart: always
+##    ports:
+##      - 8080:8080
+##    depends_on:
+##      - mongo
+##  mongo:
+##    image: mongo
+##    ports:
+##      - 27017:27017
+## Use root/example as user/password credentials
+#version: "3"
+#services:
+#  mongodb:
+#    image: mongo:latest
+#    container_name: "mongodb"
+##    network_mode: 'host'
+#    restart: always
+#    ports:
+#      - 27017:27017
+#  product_catalog:
+#    build: .
+##    image: product_catalog:1.0
+##    container_name: product_catalog
+##    network_mode: 'host'
+#    restart: always
+#    ports:
+#      - 8080:8080
+#    depends_on:
+#      - mongodb
+version: '3.3'
+
+services:
+  #service 1: definition of mongo database
+  mongo_db:
+    image: mongo
+    container_name: mongoDB
+    restart: always
+    ports:
+      - 27017:27017
+
+
+  #service 2: definition of your spring-boot app
+  product-catalog-service:                        #it is just a name, which will be used only in this file.
+    image: product-catalog-service               #name of the image after dockerfile executes
+    container_name: product-catalog-service-app  #name of the container created from docker image
+    build:
+      context: .                          #docker file path (. means root directory)
+      dockerfile: Dockerfile              #docker file name
+    ports:
+      - "8080:8080"                       #docker containter port with your os port
+    restart: always
+    depends_on:                           #define dependencies of this app
+      - mongo_db                                #dependency name (which is defined with this name 'db' in this file earlier)
