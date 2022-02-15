@@ -11,10 +11,10 @@ spring:
     name: product-catalog-service
   data:
     mongodb:
-#      uri: mongodb+srv://admin:admin@cluster0.ollrj.mongodb.net/product_catalog?retryWrites=true&w=majority
-      database: product_catalog
-      host: mongo_db
-      port: 27017
+      uri: mongodb+srv://admin:admin@cluster0.ollrj.mongodb.net/product_catalog?retryWrites=true&w=majority
+#      database: product_catalog
+#      host: mongo_db
+#      port: 27017
 
 config:
   import: "optional:configserver:http://localhost:8088"
