@@ -21,7 +21,7 @@ config:
 springdoc:
   packagesToScan: com.example.productcatalogservice
   swagger-ui:
-    path: /swagger-ui-custom.html
+    path: /
   api-docs:
     path: /api-docs
 
